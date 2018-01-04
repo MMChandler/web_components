@@ -1,0 +1,47 @@
+.tabComponent {
+  position: relative;
+  clear: both;
+  margin: 2%;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  padding: 8px;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  font-weight: 700;
+  font-family: "Helvetica", sans-serif;
+}
+.tab [type=radio] {
+  display: none;
+}
+.text {
+  position: absolute;
+  background: radial-gradient(white, cyan, yellow, orange, cyan, purple);
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5%;
+  padding-top: 10%;
+  font-weight: 700;
+  text-align: center;
+  font-family: "helvetica", sans-serif;
+  font-size: 120%;
+  height: 150px;
+}
+[type=radio]:checked ~ label {
+  background: radial-gradient(black, black, cyan);
+  color: orange;
+  z-index: 20;
+  border-top: 3px cyan outset;
+  border-right: 3px cyan outset;
+  border-radius: 55%;
+}
+[type=radio]:checked ~ .text {
+  z-index: 10;
+  border-top: 3px cyan inset;
+  border-bottom: 3px cyan outset;
+}
